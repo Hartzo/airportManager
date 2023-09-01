@@ -1,4 +1,4 @@
-package src.model;
+package src.progetto.model;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -15,12 +15,20 @@ public class Flight {
     private String arrivalAirport;  //Airport arrivalAirport;
     private int day;
 
-    Flight(String aircraft, int numPassengers, String departure, String arrival, int day) {
+    public Flight(String aircraft, int numPassengers, String departure, String arrival, int day) {
         this.aircraft = aircraft;
         this.passengers = numPassengers;
         this.departureAirport = departure;
         this.arrivalAirport = arrival;
         this.day = day;
+    }
+
+    public Flight(String[] flightData) {
+        this.aircraft = flightData[0];
+        this.passengers = Integer.parseInt(flightData[1]);
+        this.departureAirport = flightData[2];
+        this.arrivalAirport = flightData[3];
+        this.day = Integer.parseInt(flightData[4]);
     }
 
     //Creating a method to check if a Flight is overboard

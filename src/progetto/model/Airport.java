@@ -1,4 +1,4 @@
-package src.model;
+package src.progetto.model;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -7,14 +7,20 @@ import lombok.Setter;
 @Setter
 public class Airport {
 
-    private String airport_code;
+    private String code;
     private String country;
     private int maxAircrafts;
 
     public Airport(String code, String country, int max){
-        this.airport_code = code;
+        this.code = code;
         this.country = country;
         this.maxAircrafts = max;
+    }
+
+    public Airport(String[] airportData) {
+        this.code = airportData[0];
+        this.country = airportData[1];
+        this.maxAircrafts = Integer.parseInt(airportData[2]);
     }
 
 }

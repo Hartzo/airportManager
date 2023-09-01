@@ -1,9 +1,9 @@
-package src;
+package src.progetto;
 
 import java.util.Scanner;
-import src.model.Aircraft;
+import src.progetto.model.Aircraft;
 
-public class Project {
+public class Progetto {
 
     public static void main(String[] args) {
         StringBuilder stringlines = new StringBuilder();
@@ -39,7 +39,7 @@ public class Project {
 
                     Aircraft aircraft1 = new Aircraft(code, passeggeri, serbatoio, voli);
                     System.out.printf("%s %d %d %d",
-                            aircraft1.getAircraft_code(),
+                            aircraft1.getCode(),
                             aircraft1.getMaxPassengers(),
                             aircraft1.getTankCapacity(),
                             aircraft1.getTripsLastYear()
